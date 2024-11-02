@@ -1,0 +1,45 @@
+.loginlogo
+{
+  height: 350rpx;
+}
+.line{
+  margin: 0 auto;
+  height: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #D8D8D8;
+}
+
+.input1
+{
+  height: 100rpx;
+  margin: 10rpx auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.forgetpwd
+{
+  font-size: small;
+  color: #c7c7c7;
+  margin: 0 auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.LoginBtn
+{
+  margin-top: 50rpx;
+}
+.no-user
+{
+  font-size: small;
+  color: #c7c7c7;
+  margin-left: 50px;
+  float: left;
+}
+.registerBtn
+{
+  font-size: small;
+  color: #1DD389;
+  float: left;
+  
+}

@@ -1,0 +1,21 @@
+<view>
+  <image class = "loginlogo" src = "./images/loginlogo.png"/>
+</view>
+<view>
+  <input class = "input1" placeholder="请输入手机号" name="account" bindchange="getaccount" value="{{account}}"/>
+</view>
+<view class="line"></view>
+<view>
+  <input class = "input1" type="password" placeholder="请输入密码" name="password" bindchange="getPWD" value="{{password}}"/>
+</view>
+<view class="line"></view>
+<view>
+  <text class = "forgetpwd">忘记密码？</text>
+</view>
+<view class = "LoginBtn">
+  <button type="primary" class = "LoginBtn" bind:tap="login" form-type="submit">登录</button>
+</view>
+<view>
+  <text class="no-user">没有账号？</text>
+  <text class = "registerBtn" bind:tap="gotoRegister">注册</text>
+</view>

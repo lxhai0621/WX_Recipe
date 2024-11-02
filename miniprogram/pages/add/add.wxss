@@ -1,0 +1,70 @@
+.shangchuan{
+  width:90%;
+  height:90%;
+  border:solid 3px #dadada;
+  margin-top: 70rpx;
+  margin-left: 37rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 70rpx;
+}
+.title{
+  font-size: x-large;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+.line{
+  margin: 0 auto;
+  height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20rpx;
+  background-color: #D8D8D8;
+}
+.inputarea
+{
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+.area{
+  display: flex;
+}
+.name{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+.inputarea1
+{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+}
+.inputarea2
+{
+  margin-top: 20rpx;
+  margin-left: 90rpx;
+}
+.inputarea3
+{
+  margin-top: 20rpx;
+  margin-left: 130rpx;
+}
+.addimage{
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 25rpx;
+}
+.tipsarea .kuang{
+  background-color: #fdd143;
+  height: 50rpx;
+  font-size: small;
+}
+.tipsarea{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border: #fdd143 solid 1px;
+  margin-top: 30rpx;
+} 
+.bitian{
+  margin-left: 20rpx;
+  margin-top: -30rpx;
+  margin-bottom: 30rpx;
+}

@@ -1,0 +1,22 @@
+<view class="placeholder-view"></view>
+
+
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view>
+    <view class="comment" wx:for="{{CommentList}}" wx:key="index">
+      <t-avatar class="avatar" image="{{item.avatar}}" size="30px" />
+      <text class="nickname">{{item.name}}</text>
+      <image class="del" wx:if="{{account == item.account}}" src="../../images/删除.png" bind:tap="delete" data-value="{{item._id}}"/>
+      <view class="msg_box">
+        <view class="msg">
+          <text>{{item.Msg}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="commentPublish">
+  <input class="answer-input" placeholder="写回复" value="{{comment}}" bindchange="write" />
+  <button class="publishButton" size="{{mini}}" bind:tap="submitComment"> 提交 </button>
+</view>

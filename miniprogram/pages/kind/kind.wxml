@@ -1,0 +1,48 @@
+<view wx:if="{{!focus}}" class='search'>
+  <input type='text' placeholder='想做什么菜' placeholder-class="center" confirm-type='search' bindfocus="focusHandler"></input>
+  <image class="searchimage" src='../../images/搜索.png'></image>
+</view>
+<view wx:if="{{focus}}" class='search'>
+  <image class="searchimage" src='../../images/取消.png' bind:tap='cancelHandler'></image>
+  <input class="searchinput" type='text' placeholder='想做什么菜' confirm-type='search' value="{{inputValue}}" bindinput='query'>
+  </input>
+  <image class="confirmimage" src="../../images/确认搜索.png" bind:tap="search"></image>
+</view>
+<view class="kindarea">
+  <scroll-view scroll-y class="nav-left">
+			<view wx:for="{{List}}" wx:key="this" class="nav-left-item {{currentIndex_L == index ? 'L-item-active' : ''}}" 
+				bindtap="bindleLeftItemTap" data-index="{{index}}" >
+				<text class="nav-left-item-txt {{currentIndex_L == index ? 'L-i-txt-active' : ''}}">{{item.LeftName}}</text>
+			</view>
+	</scroll-view>
+  <scroll-view scroll-y scroll-top="{{scrollTop}}" class="nav-right">
+			<view wx:for="{{List[currentIndex_L].RightList}}" wx:key="this" class="nav-right-item" bindtap="bindleRightItemTap" 
+				data-index="{{index}}"> 
+				<text class="nav-right-item-txt {{currentIndex_R == index ? 'R-i-txt-active' : ''}}">{{item.RightName}}</text>
+				<view class="{{currentIndex_R == index ? 'image-select' : ''}}">
+					<image wx:if="{{currentIndex_R == index}}" class="item-select" src="../../images/进度条-对勾.png"/>
+ 				</view>
+			</view>
+		</scroll-view>
+</view>
+<view class="recipearea" wx:if="{{!chooseflag}}">
+  <view wx:for="{{recipeList}}" wx:key="index">
+    <navigator class= "navigator1" url="../detail/detail?Rname={{item.Rname}}">
+    <view class="recipelabel">
+     <image src="{{item.img}}"></image>
+      <view class="recipecontent">{{item.Rname}}</view>
+   </view>
+   </navigator>
+  </view>
+</view>
+<view class="recipearea" wx:if="{{chooseflag}}">
+  <view wx:for="{{kindList}}" wx:key="index">
+    <navigator class= "navigator1" url="../detail/detail?Rname={{item.Rname}}">
+    <view class="recipelabel">
+     <image src="{{item.img}}"></image>
+      <view class="recipecontent">{{item.Rname}}</view>
+   </view>
+   </navigator>
+  </view>
+</view>
+

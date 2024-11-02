@@ -1,0 +1,47 @@
+<view class="shangchuan">
+  <view class="title">菜品名称</view>
+  <view class="line"></view>
+  <input class="inputarea" placeholder="输入名称" bindchange="getname" value="{{Rname}}"/>
+  <view class="line"></view>
+  <view class="area">
+  <view class="name">类型</view>
+  <input class="inputarea3" placeholder="如炒菜" bindchange="getkind" value="{{kind}}"/>
+  </view>
+  <view class="line"></view>
+  <view class="area">
+  <view class="name">主要食材</view>
+  <input class="inputarea1" placeholder="如猪肉,白菜(以逗号隔开)" bindchange="getingredient" value="{{ingredient}}"/>
+  </view>
+  <view class="line"></view>
+  <view class="area">
+  <view class="name">调味料</view>
+  <input class="inputarea2" placeholder="如味精,盐（以逗号隔开)" bindchange="getseasoning" value="{{seasoning}}"/>
+  </view>
+  <view class="line"></view>
+  <view class="line"></view>
+  <view>
+    <view class="area">
+      <view class="name">步骤1:</view>
+      <input class="inputarea2" placeholder="请输入:" data-index='0' bindchange='getstep' value="{{step[0]}}"/>
+    </view>
+    <view class="line"></view>
+  </view>
+  <view wx:for="{{addstep}}" wx:key="index">
+    <view class="area">
+      <view class="name">步骤{{item}}:</view>
+      <input class="inputarea2" placeholder="请输入：" data-index="{{index+1}}" bindchange="getstep"/>
+    </view>
+    <view class="line"></view>
+  </view>
+  <view style="display: flex;">
+    <button type="primary" style="width: 200rpx; height: 70rpx; font-size: 15px;margin-left: 40rpx;text-align: center;padding-left: 1px;padding-top: 4px;padding-bottom: 0px;padding-right: 1px; margin-top: 50rpx;" bind:tap="addstep">添加步骤</button>
+    <button type="primary" style="width: 200rpx; height: 70rpx; font-size: 15px;text-align: center;padding-left: 1px;padding-top: 4px;padding-bottom: 0px;padding-right: 1px; margin-top: 50rpx;margin-right: 40rpx;" bind:tap="delstep">删除步骤</button>
+  </view>
+  <view class="tipsarea">
+    <view class="kuang">tips</view>
+    <input class="inputarea2" placeholder="有什么要点呢？" bindchange="gettips" value="{{tips}}"/>
+  </view>
+  <image class="addimage"src="{{recipeimagepath}}" bind:tap="uploadimage"></image>
+  <view class="bitian">(必填)</view>
+  <button type="primary" style="width:90%;" bind:tap="uploadrecipe">上传</button>
+</view>

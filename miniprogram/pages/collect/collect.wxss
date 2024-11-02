@@ -1,0 +1,38 @@
+/* pages/mypub/mypub.wxss */
+.pub-pic{
+  width: 30%;
+  height: 250rpx;
+}
+.pub-img{
+  width: 250rpx;
+  height: 200rpx;
+}
+.pub-item{
+  display: flex;
+}
+.pub-name{
+  margin-left: 30rpx;
+}
+.pub-ingredient{  
+  font-size: small;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  width: 10em;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+}
+.pub-text{
+  margin: 30rpx;
+}
+.kind{
+  color: #ff0000;
+  font-size: large;
+  font-weight: bold;
+  width: 5rem;
+  margin-left: 30rpx;
+  margin-top: 50rpx;
+}
+.navigator1{
+  display: flex;
+}

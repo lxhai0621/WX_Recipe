@@ -1,0 +1,29 @@
+<view>
+  <swiper autoplay="true" circular="true" indicator-color="rgba(255,255,255,.6)" indicator-active-color="#5ec39f" class="banner">
+    <swiper-item>
+      <image class="swiperimage"src="../../images/shaokao.png"/>
+      <view class="bannerinfo">烧烤这样做简直绝了!快来试试！！</view>
+    </swiper-item>
+    <swiper-item>
+      <image class="swiperimage"src="../../images/shicaidaquan.png"/>
+      <view class="bannerinfo">菜谱大全，你有什么拿手菜？</view>
+    </swiper-item>
+    <swiper-item>
+      <image class="swiperimage"src="../../images/chengzi.png"/>
+      <view class="bannerinfo">一颗橙子富含多少维生素C？</view>
+    </swiper-item>
+  </swiper>
+  <view class="content">
+    <text>热门菜谱推荐</text>
+    <view class="wrapper" wx:for="{{recipeList}}" wx:key="index" wx:if='{{index<3}}'>
+    <navigator class= "navigator1" url="../detail/detail?Rname={{item.Rname}}">
+        <image src="{{item.img}}"></image>
+        <view class="info">
+          <view class="title">{{item.Rname}}</view>
+          <view class="desc">{{item.step}}</view>
+        </view>
+    </navigator>
+    </view>
+    <view class="more" bind:tap="gotomore">查看更多</view>
+  </view>
+</view>

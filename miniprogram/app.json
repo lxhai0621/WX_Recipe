@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/kind/kind",
+    "pages/add/add",
+    "pages/collect/collect",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/mypub/mypub",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#11D183",
+    "navigationBarTitleText": "食为天",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "images/selectedhome.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/selectfenlei.png",
+        "iconPath": "images/fenlei.png",
+        "pagePath": "pages/kind/kind",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "images/selectedadd.png",
+        "iconPath": "images/add.png",
+        "pagePath": "pages/add/add",
+        "text": "发布"
+      },
+      {
+        "selectedIconPath": "images/selectcollect.png",
+        "iconPath": "images/collect.png",
+        "pagePath": "pages/collect/collect",
+        "text": "收藏"
+      },
+      {
+        "selectedIconPath": "images/selectedmy.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "t-avatar": "tdesign-miniprogram/avatar/avatar",
+    "t-avatar-group": "tdesign-miniprogram/avatar-group/avatar-group",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-upload": "tdesign-miniprogram/upload/upload"
+  }
+}

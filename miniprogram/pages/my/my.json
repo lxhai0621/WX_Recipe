@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-avatar": "tdesign-miniprogram/avatar/avatar",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-upload": "tdesign-miniprogram/upload/upload"
+  }
+}

@@ -1,0 +1,93 @@
+.detail image{
+  width: 100%;
+  height: 400rpx;
+}
+.detail .desc{
+  background-color: #efefef;
+  border: solid 1px #b6ddf1;
+  height: 90rpx;
+  margin-top: -10rpx;
+}
+.desc .title{
+  font-size: medium;
+  float: left;
+  padding-top: 20rpx;
+  padding-left: 70rpx;
+}
+.desc .content{
+  display: flex;
+  float: right;
+  font-size: medium;
+  padding-top: 20rpx;
+  padding-right: 40rpx;
+  color: #a0a07d;
+}
+.step
+{
+  margin-left: 70rpx;
+}
+.steparea image{
+  height: 40rpx;
+  width: 40rpx;
+  display: flex;
+  margin-top: 20rpx;
+}
+.step .stepindex{
+  font-size: 15px;
+  margin-top: -45rpx;
+}
+.step .stepdetail{
+  font-size: 12px;
+}
+.line{
+  margin-top:10rpx;
+  height: 1px;
+  margin-left: 0rpx;
+  margin-right: 0px;
+  background-color: #D8D8D8;
+}
+.tipsarea{
+  border:solid 1px #fdd143;
+  height: 200rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  margin-top: 10rpx;
+}
+.tipsarea .kuang{
+  background-color: #fdd143;
+  height: 50rpx;
+  font-size: small;
+}
+.tipsarea .tipscontent{
+  font-size: 13px;
+}
+.bottom-bar{
+  height: 100rpx;
+}
+.like image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 150rpx;
+  float: left;
+}
+.like{
+  float: left;
+}
+.like .likecount{
+  float: left;
+  margin-left: 15rpx;
+}
+.comment{
+  float: right;
+}
+.comment image{
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  margin-right: 200rpx;
+}
+.comment .commentcount{
+  float: right;
+  margin-right: -115rpx;
+}

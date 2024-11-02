@@ -1,0 +1,30 @@
+<text class="title">手机号注册</text>
+<view>
+  <view style="display: flex; align-items: center; margin-top: 50rpx;">
+    <text style="margin-left: 50rpx;">昵称:</text>
+    <input style="margin-left: 10px; font-size: small;" placeholder="例如：小宗" bindchange="getName" name="name"></input>
+    <image class = "touxiang" src = "{{avatarpath}}" bind:tap="ChooseTou"/>
+  </view>
+</view>
+<view class="line"></view>
+<view>
+  <text style="margin-left: 50rpx;">国家/地区：</text>
+  <text style="color: #35a64e;">中国大陆（+86）</text>
+</view>
+<view style="margin-top: 40rpx;display: flex; align-items: center;">
+  <text style="margin-left: 50rpx;">手机号：</text>
+  <input  style="margin-left: 10px; font-size: small;" placeholder="请填写手机号码" bindchange="getAccount" name="account"></input>
+</view>
+<view class="line"></view>
+<view style="margin-top: 10rpx;display: flex; align-items: center;">
+  <text style="margin-left: 50rpx;">密码：</text>
+  <input style="margin-left: 10px; font-size: small;" placeholder="请填写密码" bindchange="getPWD" name="Password"></input>
+</view>
+<view class="line"></view>
+<view style="margin-top: 70rpx;margin-left: 70rpx;" bindtap="check">
+  <radio checked="{{check}}"></radio>
+  <span style="font-size: small;">已阅读并同意</span>
+  <text style="font-size: small; color: #4c69a3;">《微信软件许可及服务协议》</text>
+</view>
+<button type="primary" style="margin-top: 10rpx;" bind:tap="register" form-type="submit">注册</button>
+

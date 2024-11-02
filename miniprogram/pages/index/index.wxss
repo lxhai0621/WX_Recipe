@@ -1,0 +1,44 @@
+.swiperimage{
+  height: 350rpx;
+}
+.bannerinfo{
+  margin-top: -55rpx;
+  background-color:rgba(0,0,0,0.35);
+  position:absolute;
+  width: 100%;
+}
+.banner{
+  height:500rpx
+}
+.content{
+  margin-top: -130rpx;
+  margin-left: 50rpx;
+}
+.content image{
+  height:130rpx;
+  width: 130rpx;
+  margin-top: 40rpx;
+}
+.wrapper .info{
+  flex:1;
+  margin-top: 40rpx;
+}
+.wrapper{
+  display: flex;
+}
+.info .desc{
+  color: #a5999f;
+  font-size: small;
+  width: 15em;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+}
+.more{
+  font-size: small;
+  color: #586c97;
+  margin-top: 30rpx;
+}
+.navigator1{
+  display: flex;
+}

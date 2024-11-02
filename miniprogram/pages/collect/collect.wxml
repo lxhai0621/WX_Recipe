@@ -1,0 +1,15 @@
+<view class="pub-item" wx:for="{{Recipelist}}" wx:key="index">
+    <navigator class= "navigator1" url="../detail/detail?Rname={{item.Rname}}">
+        <image class="pub-img" src="{{item.img}}"></image>
+        <view>
+          <view class="pub-name">{{item.Rname}}</view>
+          <view class="pub-ingredient">食材：{{item.ingredient[0]}}；调料：{{item.seasoning[0]}}</view>
+          <view class="pub-item">
+      <view class="kind">{{item.kind}}</view>
+      <view>
+        <button size="mini" style="background-color: orange; color: white; width: 100px; margin-top: 50rpx; margin-left: 30rpx;" bind:tap="">查看</button>
+      </view>
+    </view>
+        </view>
+    </navigator>
+</view>

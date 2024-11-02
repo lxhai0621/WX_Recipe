@@ -1,0 +1,69 @@
+<view class="avatar">
+  <t-avatar image="{{avatar}}" size="100px" />
+</view>
+
+<view class="name">
+  <text>{{name}}</text>
+</view>
+
+<view class="gap1"></view>
+
+<view class="gap2">
+  <image class="pic1" src="./image/sc.png" />
+  <text bind:tap="toCollect">我的收藏</text>
+  <image class="pic2" src="./image/right.png" />
+</view>
+
+<view class="gap2">
+  <image class="pic1" src="./image/增加.png" />
+  <text bind:tap="tomypub">我的发布</text>
+  <image class="pic2" src="./image/right.png" />
+</view>
+
+<view class="gap2">
+  <image class="pic1" src="./image/cpwd.png" />
+  <text bind:tap="handlePopup">修改密码</text>
+  <image class="pic2" src="./image/right.png" />
+</view>
+
+<view class="gap2">
+  <image class="pic1" src="./image/sz.png" />
+  <text bind:tap="edit">我的设置</text>
+  <image class="pic2" src="./image/right.png" />
+</view>
+
+<view class="gap2">
+  <image class="pic1" src="./image/退出登录.png" />
+  <text bind:tap="exit">退出登录</text>
+  <image class="pic2" src="./image/right.png" />
+</view>
+
+<t-popup visible="{{visible1}}" bind:visible-change="onVisibleChange1" placement="bottom">
+  <view class="block">
+    <view class="header">
+      <view class="btn btn--cancel" aria-role="button" bind:tap="cancel">取消</view>
+      <view class="title">修改密码</view>
+      <view class="btn btn--confirm" aria-role="button" bind:tap="cpwd">确定</view>
+    </view>
+    <form bindsubmit="">
+      <t-input label="输入原密码" type="password" placeholder="4 ~ 15 位的字符" bindchange="bindKeyInput1" maxlength="15" value="{{textPassword_old}}" clearable />
+      <t-input label="输入新密码" type="password" maxlength="15" bindchange="bindKeyInput2" value="{{textPassword_new}}" clearable />
+    </form>
+  </view>
+</t-popup>
+
+<t-popup visible="{{visible2}}" bind:visible-change="onVisibleChange2" placement="bottom">
+  <view class="block">
+    <view class="header">
+      <view class="btn btn--cancel" aria-role="button" bind:tap="cancel">取消</view>
+      <view class="title" >修改个人信息</view>
+      <view class="btn btn--confirm" aria-role="button" bind:tap="onUpload">确定</view>
+    </view>
+    <view class="wrapper">
+      <t-upload mediaType="{{['image']}}" max="{{1}}" files="{{fileList}}" bind:add="handleAdd" bind:remove="handleRemove">
+      </t-upload>
+    </view>
+    <t-input label="昵称" type="text" value="{{name}}" bindchange="bindKeyInput" clearable />
+  </view>
+</t-popup>
+

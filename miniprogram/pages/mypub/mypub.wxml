@@ -1,0 +1,18 @@
+<!--pages/mypub/mypub.wxml-->
+<view class="pub-text">您共上传了{{count}}条菜谱</view>
+<view class="pub-item" wx:for="{{Recipelist}}" wx:key="index">
+        <image class="pub-img" src="{{item.img}}"></image>
+        <view >
+          <view class="title">
+            <view class="pub-name">{{item.Rname}}</view>
+            <image class="deleteicon" src="../../images/删除.png" bind:tap="delete" data-value="{{item.Rname}}"></image>
+          </view>
+          <view class="pub-ingredient">食材：{{item.ingredient[0]}}；调料：{{item.seasoning[0]}}</view>
+          <view class="pub-item">
+      <view class="kind">{{item.kind}}</view>
+      <view>
+        <button size="mini" style="background-color: orange; color: white; width: 100px; margin-top: 50rpx; margin-left: 30rpx;" bind:tap="view" data-value="{{item.Rname}}">查看</button>
+      </view>
+    </view>
+        </view>
+</view>

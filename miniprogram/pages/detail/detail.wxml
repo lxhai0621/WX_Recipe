@@ -1,0 +1,42 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <image src="{{recipe.img}}"></image>
+  <view class="desc">
+    <view class="title">分类：</view>
+    <view class="content">{{recipe.kind}}</view>
+  </view>
+  <view class="desc" bind:tap="showrecipe">
+    <view class="title">主要食材：</view>
+    <view class="content">{{recipe.ingredient[0]}}</view>
+  </view>
+  <view class="desc" bind:tap="showseasoning">
+    <view class="title">调料：</view>
+    <view class="content">{{recipe.seasoning[0]}}</view>
+  </view>
+  <view class="steparea" wx:for="{{recipe.step}}" wx:key="index">
+    <image src="../../images/check-circle-fill.png"></image>
+    <view class="step">
+      <view class="stepindex">
+      步骤{{index+1}}
+      </view>
+      <view class="stepdetail">{{item}}</view>
+      <view class="line"></view>
+    </view>
+  </view>
+  <view class="tipsarea">
+    <view class="kuang">tips</view>
+    <view class="tipscontent">{{recipe.tips}}</view>
+  </view>
+  <view class="bottom-bar">
+  <view class="like" wx:if="{{!flag}}" bind:tap="collect">
+    <image src="../../images/收藏.png"></image>
+  </view>
+  <view class="like" wx:if="{{flag}}" bind:tap="collect">
+    <image src="../../images/收藏电亮.png"></image>
+  </view>
+  <view class="comment">
+    <image src="../../images/评论.png"  bind:tap="tocomment"></image>
+    <view class="commentcount"></view>
+  </view>
+  </view>
+</view>
